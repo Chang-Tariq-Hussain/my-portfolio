@@ -2,6 +2,10 @@
 // import {Skill} from "../../sanity.types";
 // import Image from "next/image";
 // import {urlFor} from "@/sanity/lib/image";
+import HeroSection from "@/components/hero/Hero";
+import Navbar from "@/components/navbar/Navbar";
+import Container from "@/components/Container";
+
 export default async function Home() {
     // const skills:Skill[] = await getSkills();
   return (
@@ -9,6 +13,11 @@ export default async function Home() {
           {/*<ul>*/}
           {/*    {skills.map((skill) => <Image key={skill._id} bg-gray-800alt={skill.name || "skill"} width={300} height={300} src={urlFor(skill.icon).url() || ""}></Image>)}*/}
           {/*</ul>*/}
+          <Container>
+              <HeroSection/>
+              <Navbar/>
+          </Container>
+
       </div>
   );
 }
