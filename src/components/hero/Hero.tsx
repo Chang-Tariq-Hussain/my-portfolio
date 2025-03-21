@@ -47,8 +47,8 @@ const HeroSection: React.FC = () => {
             </h2>
 
             {/* Description */}
-            <p className="text-lg md:text-xl mb-8">
-                Crafting modern web applications with clean code and solid architecture.
+            <p className="text-lg max-w-[90%] md:text-xl mb-8 lg:max-w-[70%] xl:max-w-[50%] ">
+                I strive to develop web applications that are fast, accessible, and engaging. Whether it&apos;s an interactive UI, a complex backend system, or an optimized full-stack solution, my focus is on delivering exceptional digital experiences.
             </p>
 
             {/* Social Links */}
