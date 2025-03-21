@@ -1,7 +1,6 @@
 "use client"
 import Link from "next/link";
 import React, {useEffect, useState} from "react";
-import {usePathname} from "next/navigation";
 
 export interface NavButtonProps{
     label: string,
@@ -11,7 +10,28 @@ export interface NavButtonProps{
     icon: string,
     isActive?: boolean
 }
-export default function NavButton({label, ariaLabel, href, id, icon}:NavButtonProps) {
+export default function NavButton({label, ariaLabel, id, icon}:NavButtonProps) {
+    useEffect(() => {
+        const handleScrollSpy = () => {
+            const sections = document.querySelectorAll('[id]');
+            let activeSectionId = '';
+
+            sections.forEach((section) => {
+                const rect = section.getBoundingClientRect();
+                // Check if section is in viewport
+                if (rect.top <= window.innerHeight * .25 && rect.bottom >= window.innerHeight * .25) {
+                    activeSectionId = section.id;
+                }
+            });
+
+            setHash(`#${activeSectionId}`); // Update the hash with the active section
+        };
+
+        handleScrollSpy(); // Check initially on load
+        window.addEventListener("scroll", handleScrollSpy); // Listen for scroll events
+
+        return () => window.removeEventListener("scroll", handleScrollSpy);
+    }, []);
     const [hash, setHash] = useState("");
 
     useEffect(() => {
@@ -36,7 +56,6 @@ export default function NavButton({label, ariaLabel, href, id, icon}:NavButtonPr
             }, 100);
         }
     };
-    const pathname = usePathname();
     const isActive = hash.length > 0 ? hash  === id : id === '#home';
     return (
         <Link onClick={handleClick}  href={id} className="relative group" role="menuitem" aria-label={ariaLabel}>
