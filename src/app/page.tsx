@@ -5,6 +5,11 @@
 import HeroSection from "@/components/hero/Hero";
 import Navbar from "@/components/navbar/Navbar";
 import Container from "@/components/Container";
+import SkillsPage from "./skills/page";
+import EducationPage from "./education/page";
+import ExperiencePage from "./experience/page";
+import ProjectsPage from "./projects/page";
+import ContactPage from "./contact/page";
 
 export default async function Home() {
     // const skills:Skill[] = await getSkills();
@@ -15,7 +20,11 @@ export default async function Home() {
           {/*</ul>*/}
           <Container>
               <HeroSection/>
-              <Navbar/>
+              <SkillsPage/>
+              <EducationPage/>
+              <ExperiencePage/>
+              <ProjectsPage/>
+              <ContactPage/>
           </Container>
 
       </div>

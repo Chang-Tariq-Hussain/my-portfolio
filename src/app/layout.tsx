@@ -4,6 +4,7 @@ import "./globals.css";
 import {ThemeProvider} from "@/components/theme-provider";
 import Header from "@/components/header/Header";
 import {SanityLive} from "@/sanity/lib/live";
+import Navbar from "@/components/navbar/Navbar";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -38,6 +39,8 @@ export default function RootLayout({
       >
           <Header/>
         {children}
+          <Navbar/>
+
           <SanityLive/>
       </ThemeProvider>
 

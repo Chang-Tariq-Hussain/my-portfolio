@@ -24,7 +24,7 @@ const HeroSection: React.FC = () => {
     ];
 
     return (
-        <section className="flex flex-col justify-center text-left min-h-screen pt-20 px-4">
+        <section id='home' className="flex flex-col justify-center text-left min-h-screen pt-20 px-4">
 
             {/* Name */}
             <h1 className="text-4xl md:text-6xl font-bold mb-2">
