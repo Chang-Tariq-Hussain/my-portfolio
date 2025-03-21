@@ -37,15 +37,14 @@ export default function NavButton({label, ariaLabel, href, id, icon}:NavButtonPr
         }
     };
     const pathname = usePathname();
-    const isActive = hash  === id;
-    
+    const isActive = hash.length > 0 ? hash  === id : id === '#home';
     return (
         <Link onClick={handleClick}  href={id} className="relative group" role="menuitem" aria-label={ariaLabel}>
             <div
                 className={`p-2 rounded-full transition-colors ${
                     isActive
                         ? "bg-green-600 text-white"
-                        : "text-gray-800 hover:bg-gray-100 dark:text-white group-hover:text-black dark:group-hover:text-black"
+                        : "text-gray-800 hover:bg-gray-100 dark:text-white group-hover:bg-white group-hover:text-black dark:group-hover:text-black"
                 }`}>
                 {icon}
             </div>
