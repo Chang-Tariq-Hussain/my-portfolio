@@ -6,6 +6,5 @@ export async function getProjects() {
     const projects = await sanityFetch({
         query: getProjectsQuery,
     })
-    console.log("projects data>>> ", projects.data);
     return projects.data;
 }
