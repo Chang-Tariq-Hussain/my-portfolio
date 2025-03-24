@@ -1,4 +1,5 @@
 import {defineField, defineType} from 'sanity';
+import {orderRankField} from "@sanity/orderable-document-list";
 
 export const projectSchema = defineType(
     {
@@ -45,6 +46,7 @@ export const projectSchema = defineType(
                 type: "image",
                 options: { hotspot: true },
             }),
+            orderRankField({type: "project"})
         ],
     }
 )

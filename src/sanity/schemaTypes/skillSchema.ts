@@ -1,4 +1,5 @@
 import { defineField, defineType } from 'sanity';
+import {orderRankField} from "@sanity/orderable-document-list";
 
 export const skillSchema = defineType({
     name: "skill",
@@ -17,5 +18,6 @@ export const skillSchema = defineType({
             type: "image",
             options: { hotspot: true },
         }),
+        orderRankField({type: "skill"})
     ],
 });

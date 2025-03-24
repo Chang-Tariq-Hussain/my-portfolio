@@ -1,4 +1,5 @@
 import { defineField, defineType } from 'sanity';
+import {orderRankField} from "@sanity/orderable-document-list";
 
 export const experienceSchema = defineType({
     name: "experience",
@@ -31,5 +32,6 @@ export const experienceSchema = defineType({
             title: "Description",
             type: "text",
         }),
+        orderRankField({type: "experience"})
     ],
 });

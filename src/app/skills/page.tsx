@@ -6,7 +6,7 @@ import Heading from '@/components/heading/Heading';
 export default async function SkillPage() {
     const skills = await getSkills();
     return (
-        <section id='skills' className={'pt-20'}>
+        <section id='skills' className={'pt-10'}>
             {/*<h1 className={'text-5xl'}>Skill Page</h1>*/}
             <Heading text={'Technical Skills'}/>
             <div className={'grid-container'}>
