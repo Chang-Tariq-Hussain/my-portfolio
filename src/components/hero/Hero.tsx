@@ -3,7 +3,7 @@ import React from "react";
 import {Download, Github, Linkedin, Mail } from "lucide-react";
 import {ReactTyped} from "react-typed";
 import GradientButton from "@/components/ui/GradientButton";
-
+import Image from "next/image";
 const HeroSection: React.FC = () => {
     const socialLinks = [
         {
