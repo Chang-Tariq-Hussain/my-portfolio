@@ -76,7 +76,7 @@ export default function ContactPage() {
                 <Card className="shadow-lg dark:bg-gray-900">
                     <CardHeader>
                         <CardTitle>Send me a message</CardTitle>
-                        <CardDescription>I'll get back to you as soon as possible.</CardDescription>
+                        <CardDescription>I&apos;ll get back to you as soon as possible.</CardDescription>
                     </CardHeader>
                     <CardContent>
                         <Form {...form}>
@@ -84,7 +84,7 @@ export default function ContactPage() {
                                 <FormField
                                     control={form.control}
                                     name="name"
-                                    render={({ field }: { field: any }) => (
+                                    render={({ field }) => (
                                         <FormItem>
                                             <FormLabel>Name</FormLabel>
                                             <FormControl>
@@ -97,7 +97,7 @@ export default function ContactPage() {
                                 <FormField
                                     control={form.control}
                                     name="email"
-                                    render={({ field }: { field: any }) => (
+                                    render={({ field }) => (
                                         <FormItem>
                                             <FormLabel>Email</FormLabel>
                                             <FormControl>
@@ -110,7 +110,7 @@ export default function ContactPage() {
                                 <FormField
                                     control={form.control}
                                     name="message"
-                                    render={({ field }: { field: any }) => (
+                                    render={({ field }) => (
                                         <FormItem>
                                             <FormLabel>Message</FormLabel>
                                             <FormControl>

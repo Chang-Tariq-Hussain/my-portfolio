@@ -11,7 +11,7 @@ export const projectSchema = defineType(
                 name: "title",
                 title: "Title",
                 type: "string",
-                validation: (Rule: { required: () => any; }) => Rule.required(),
+                // validation: (Rule: { required: () => any; }) => Rule.required(),
             }),
             defineField({
                 name: "slug",

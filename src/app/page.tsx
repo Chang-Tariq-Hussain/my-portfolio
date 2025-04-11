@@ -3,7 +3,6 @@
 // import Image from "next/image";
 // import {urlFor} from "@/sanity/lib/image";
 import HeroSection from "@/components/hero/Hero";
-import Navbar from "@/components/navbar/Navbar";
 import Container from "@/components/Container";
 import SkillsPage from "./skills/page";
 import EducationPage from "./education/page";
