@@ -1,13 +1,13 @@
 "use client"
 import Link from "next/link";
-import React, {useEffect, useState} from "react";
+import React, {ReactElement, useEffect, useState} from "react";
 
 export interface NavButtonProps{
     label: string,
     ariaLabel: string,
     href: string,
     id: string,
-    icon: string,
+    icon: ReactElement,
     isActive?: boolean
 }
 export default function NavButton({label, ariaLabel, id, icon}:NavButtonProps) {
