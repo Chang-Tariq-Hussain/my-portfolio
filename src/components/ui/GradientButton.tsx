@@ -1,9 +1,9 @@
 "use client";
 
-import { Button, ButtonProps } from "@/components/ui/button";
+import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 
-const GradientButton = ({ className, children, ...props }: ButtonProps) => {
+const GradientButton = ({ className, children, ...props }: any) => {
     return (
         <Button
             className={cn(
