@@ -1,9 +1,10 @@
 import { urlFor } from "@/sanity/lib/image";
+import { SanityImageSource } from "@sanity/image-url/lib/types/types";
 import Image from "next/image";
 
 export interface SkillCardProps {
     name?: string;
-    skillIcon?: string;
+    skillIcon?: SanityImageSource;
 }
 
 export default function SkillCard({ name, skillIcon }: SkillCardProps) {
